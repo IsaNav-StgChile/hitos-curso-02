@@ -59,3 +59,5 @@ gem 'tzinfo-data'
 gem 'net-smtp', '~> 0.3.1'
 gem 'net-imap', require: false
 gem 'net-pop', require: false
+
+gem "devise", "~> 4.8"
