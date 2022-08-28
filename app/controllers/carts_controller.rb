@@ -2,12 +2,12 @@ class CartsController < ApplicationController
   before_action :authenticate_user!
 
   def update
-    product = parms[:cart][:product_id]
-		quantity = params[:cart][:quantity_id] 
+    product = params[:cart][:product_id].to_i
+		quantity = params[:cart][:quantity].to_i 
 
 	  current_order.add_product(product, quantity)
 
-		redirect_to root_path, notice:  ‘Product added  successfully’
+		redirect_to root_path, notice:  'Product added  successfully'
   end
 
   def show
